@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus</title>
+        <link rel="stylesheet" href= "{% static 'css/style.css'%}" >
+</head>
+<body>
+    <div>
+        <h1>Campus Management system</h1>
+        <nav style="text-align-last: right;">
+        <a href="{% url 'account:home' %}" style="color:white">Home</a>
+        <a href="{% url 'account:dashboard' %}" style="color:white">Dashboard</a>
+        <a href="{% url 'account:login' %}" style="color:white">Login</a>
+    </nav>
+    </div>
+    
+    <hr>
+    {% block content %}
+    {% endblock %}
+
+    
+</body>
+</html>
